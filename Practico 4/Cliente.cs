@@ -35,7 +35,7 @@ namespace Trabajo_Practico_4
             const int MaxLenght = 99999;
             do
             {
-                Console.WriteLine("Ingrese su número de cliente corporativo. (5 dígitos, sin guiones ni espacios)");
+                Console.WriteLine("Ingrese su número de cliente corporativo (5 dígitos, sin guiones ni espacios)");
                 input = Console.ReadLine();
 
                 if (!int.TryParse(input, out int Nrocliente))
@@ -83,19 +83,10 @@ namespace Trabajo_Practico_4
         public void DatosClientes()
         {
             //Verifico si el file existe, en caso de no existir se crea.
-            /*
-            if (!File.Exists(@"C:\Users\Melu\Source\Repos\Trabajo-Practico-4\ClientesCorporativos.txt"))
-            {
-                using (var writer = new StreamWriter(@"ClientesCorporativos.txt"))
-                {
-                    writer.WriteLine("40395");
-                    writer.WriteLine("18285");
-                    writer.WriteLine("14330");
-                    writer.WriteLine("48407");
 
-                    writer.Close();
-                }
-            }*/
         }
+
+
+
     }
 }

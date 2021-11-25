@@ -17,7 +17,7 @@ namespace Trabajo_Practico_4
         List<string> lista_txt = new List<string>();
 
         //Extraer del .txt los datos y guardarlos en una lista
-        public void DatosCoddeSeg() 
+        public void DatosCoddeSeg()
         {
             using (StreamReader sr = new StreamReader(@"CodigosdeSeguimiento.txt"))
             {
@@ -34,7 +34,7 @@ namespace Trabajo_Practico_4
                     lista_txt.Add(line);
                 }
                 sr.Close();
-                
+
                 codseguim = ClienteyCodSeg.Keys.Max();
             }
 
@@ -51,11 +51,6 @@ namespace Trabajo_Practico_4
             Console.WriteLine($"Se registró su servicio. Código de seguimiento: {codseguim}");
 
 
-            foreach (KeyValuePair<int, int> cliente__ in ClienteyCodSeg)
-            {
-                Console.WriteLine(cliente__.Key + "\t" + cliente__.Value);
-            }
-            Console.ReadKey();
 
             return codseguim;
         }
@@ -70,7 +65,7 @@ namespace Trabajo_Practico_4
                     sw.WriteLine(item);
                 }
 
-                sw.WriteLine(codseguim + ";" + cliente + ";" + "Recibido" + ";" + precio );
+                sw.WriteLine(codseguim + ";" + cliente + ";" + "Recibido" + ";" + precio);
 
                 sw.Close();
             }
@@ -90,7 +85,7 @@ namespace Trabajo_Practico_4
 
             do
             {
-                Console.WriteLine("Ingrese el código de seguimiento. (5 dígitos, sin guiones ni espacios)");
+                Console.WriteLine("Ingrese el código de seguimiento (5 dígitos, sin guiones ni espacios)");
                 string codigo = Console.ReadLine();
 
 
